@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "georg-remer_gendiff_utility"
+name = "hexlet_code"
 version = "0.1.0"
 description = "CLI-utility to compare files"
 authors = ["George Rymarenko <george.rymarenko@icloud.com>"]
