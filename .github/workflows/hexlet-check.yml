@@ -25,3 +25,19 @@ jobs:
         uses: hexlet/project-action@release
         with:
           hexlet-id: ${{ secrets.HEXLET_ID }}
+
+      # make depends on poetry
+      - name: Install dependencies
+        run: |
+          pip install poetry
+          make install
+
+      - name: Run linter
+        run: |
+          make lint
+
+      - name: Run tests
+        run: |
+          make test
+
+

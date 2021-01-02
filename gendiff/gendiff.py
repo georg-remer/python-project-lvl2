@@ -1,4 +1,5 @@
 """Module gendiff."""
+
 import json
 
 NEW = 'new'
