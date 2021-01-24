@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hexlet_code"
-version = "0.2.0"
+version = "0.3.0"
 description = "CLI-utility to compare files"
 authors = ["George Rymarenko <george.rymarenko@icloud.com>"]
 packages = [
@@ -13,6 +13,7 @@ repository = "https://github.com/georg-remer/python-project-lvl2"
 
 [tool.poetry.dependencies]
 python = "^3.8"
+PyYAML = "^5.4.1"
 
 [tool.poetry.dev-dependencies]
 wemake-python-styleguide = "^0.14.1"

@@ -13,4 +13,8 @@ Gendiff is a utility that compares files and generates difference between the tw
 
 ## Usage example
 
+### Help and JSON files comparison
 [![asciicast](https://asciinema.org/a/382161.svg)](https://asciinema.org/a/382161)
+
+### YAML files comparison
+[![asciicast](https://asciinema.org/a/386766.svg)](https://asciinema.org/a/386766)

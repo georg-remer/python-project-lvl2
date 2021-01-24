@@ -1,6 +1,9 @@
 """Module gendiff."""
 
 import json
+import os
+
+import yaml
 
 NEW = 'new'
 CHANGED = 'changed'
@@ -70,9 +73,19 @@ def _read(file_path):
 
     Returns:
         dict
+
+    Raises:
+        RuntimeError: unknown file extension
     """
+    _, extension = os.path.splitext(file_path)
     with open(file_path, 'r') as file_contents:
-        return json.load(file_contents)
+        if extension.lower() == '.json':
+            return json.load(file_contents)
+        if extension.lower() == '.yml':
+            return yaml.load(file_contents, Loader=yaml.FullLoader)
+        raise RuntimeError(
+            "Extension '{ext}' is not implemented".format(ext=extension),
+        )
 
 
 def generate_diff(file_path1, file_path2):
