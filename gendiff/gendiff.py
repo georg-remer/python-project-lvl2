@@ -29,9 +29,9 @@ def _compare_values(value1, value2):
     """
     if value1 is None and value2 is not None:
         return NEW
-    elif value1 is not None and value2 is None:
+    if value1 is not None and value2 is None:
         return REMOVED
-    elif value1 != value2:
+    if value1 != value2:
         return CHANGED
     return UNCHANGED
 
