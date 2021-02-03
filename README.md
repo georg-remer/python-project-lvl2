@@ -18,3 +18,6 @@ Gendiff is a utility that compares files and generates difference between the tw
 
 ### YAML files comparison
 [![asciicast](https://asciinema.org/a/386766.svg)](https://asciinema.org/a/386766)
+
+### Recursive comparison
+[![asciicast](https://asciinema.org/a/388743.svg)](https://asciinema.org/a/388743)
