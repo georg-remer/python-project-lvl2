@@ -21,3 +21,6 @@ Gendiff is a utility that compares files and generates difference between the tw
 
 ### Recursive comparison
 [![asciicast](https://asciinema.org/a/388743.svg)](https://asciinema.org/a/388743)
+
+### Plain output
+[![asciicast](https://asciinema.org/a/388800.svg)](https://asciinema.org/a/388800)

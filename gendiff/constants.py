@@ -8,11 +8,5 @@ UNCHANGED = 'unchanged'
 
 
 # Styles
+PLAIN = 'plain'
 STYLISH = 'stylish'
-
-# Line styles
-STYLISH_LINE = '{0}{1}: {2}'
-
-# Signs
-NEW_SIGN = '+'
-OLD_SIGN = '-'
