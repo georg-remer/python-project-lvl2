@@ -3,7 +3,7 @@
 import argparse
 import os
 
-from gendiff.constants import PLAIN, STYLISH
+from gendiff.constants import JSON, PLAIN, STYLISH
 from gendiff.gendiff import generate_diff
 
 
@@ -17,7 +17,7 @@ def parse_args():
     parser.add_argument(
         '-f',
         '--format',
-        choices=[PLAIN, STYLISH],
+        choices=[JSON, PLAIN, STYLISH],
         default=STYLISH,
         help='set format of output',
     )

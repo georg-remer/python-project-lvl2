@@ -8,8 +8,10 @@ Gendiff is a utility that compares files and generates difference between the tw
 
 ## Installation
 
-`git clone https://github.com/georg-remer/python-project-lvl2.git`
-`make package-install`
+```
+git clone https://github.com/georg-remer/python-project-lvl2.git
+make package-install
+```
 
 ## Usage example
 
@@ -24,3 +26,6 @@ Gendiff is a utility that compares files and generates difference between the tw
 
 ### Plain output
 [![asciicast](https://asciinema.org/a/388800.svg)](https://asciinema.org/a/388800)
+
+### JSON output
+[![asciicast](https://asciinema.org/a/388810.svg)](https://asciinema.org/a/388810)

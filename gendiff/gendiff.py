@@ -5,8 +5,8 @@ import os
 
 import yaml
 
-from gendiff.constants import PLAIN, STYLISH
-from gendiff.formatter import format_plain, format_stylish
+from gendiff.constants import JSON, PLAIN, STYLISH
+from gendiff.formatter import format_json, format_plain, format_stylish
 from gendiff.parser import construct_diff
 
 
@@ -46,6 +46,8 @@ def generate_diff(file_path1, file_path2, style=STYLISH):
     """
     file1 = _read(file_path1)
     file2 = _read(file_path2)
+    if style == JSON:
+        return format_json(construct_diff(file1, file2))
     if style == STYLISH:
         return format_stylish(construct_diff(file1, file2))
     if style == PLAIN:

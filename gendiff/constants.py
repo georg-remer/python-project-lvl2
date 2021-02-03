@@ -8,5 +8,6 @@ UNCHANGED = 'unchanged'
 
 
 # Styles
+JSON = 'json'
 PLAIN = 'plain'
 STYLISH = 'stylish'

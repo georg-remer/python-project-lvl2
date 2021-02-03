@@ -13,10 +13,24 @@ YAML_PATH = 'yaml'
 
 
 @pytest.fixture
+def expected_json_from_tree():
+    """Return expected output.
+
+    JSON result of comparison of tree files
+
+    Returns:
+        str
+    """
+    pathname = os.path.join(BASE_PATH, EXPECTED_PATH, 'json_from_tree.txt')
+    with open(pathname, 'r') as opened:
+        return opened.read()
+
+
+@pytest.fixture
 def expected_plain_from_tree():
     """Return expected output.
 
-    Plain result of comparison of plain files
+    Plain result of comparison of tree files
 
     Returns:
         str
