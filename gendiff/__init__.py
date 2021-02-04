@@ -1,3 +1,3 @@
 """Project Gendiff."""
 
-from gendiff.gendiff import generate_diff  # noqa: F401
+from gendiff.gendiff import generate_diff
