@@ -1,3 +1,3 @@
 """Project Gendiff."""
 
-from gendiff.gendiff import generate_diff
+from gendiff.constructor import generate_diff

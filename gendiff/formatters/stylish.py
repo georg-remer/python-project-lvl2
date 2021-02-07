@@ -1,7 +1,9 @@
 """Stylish formatter."""
 
-from gendiff.constants import CHANGED, NEW, REMOVED, STYLISH_LINE, UNCHANGED
-from gendiff.formatter.common import stringify
+from gendiff.constants import CHANGED, NEW, REMOVED, UNCHANGED
+from gendiff.formatters.common import stringify
+
+STYLISH_LINE = '{0}{1}: {2}'
 
 
 def _generate_line(key, state, depth, old_value=None, new_value=None):
@@ -32,10 +34,10 @@ def _generate_line(key, state, depth, old_value=None, new_value=None):
     if state == CHANGED:
         old_tab = _get_tab(depth, insert='-')
         new_tab = _get_tab(depth, insert='+')
-        return (
-            STYLISH_LINE.format(old_tab, key, old_value)
-            + '\n'
-            + STYLISH_LINE.format(new_tab, key, new_value)
+        return '{0}{1}{2}'.format(
+            STYLISH_LINE.format(old_tab, key, old_value),
+            '\n',
+            STYLISH_LINE.format(new_tab, key, new_value),
         )
 
 
