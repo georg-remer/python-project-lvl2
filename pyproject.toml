@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hexlet-code"
-version = "0.6.3"
+version = "0.6.4"
 description = "CLI-utility to compare files"
 authors = ["George Rymarenko <george.rymarenko@icloud.com>"]
 packages = [
@@ -12,7 +12,7 @@ classifiers = [
 repository = "https://github.com/georg-remer/python-project-lvl2"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.6"
 PyYAML = "^5.4.1"
 
 [tool.poetry.dev-dependencies]
