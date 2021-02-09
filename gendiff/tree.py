@@ -1,11 +1,13 @@
 """Difference tree constructor."""
 
-from gendiff.constants import CHANGED, NEW, REMOVED, UNCHANGED
-from gendiff.formatter import STYLISH, format_diff
-from gendiff.parser import parse_file
+# Node states
+CHANGED = 'changed'
+NEW = 'new'
+REMOVED = 'removed'
+UNCHANGED = 'unchanged'
 
 
-def construct_diff(file1, file2):
+def build_diff(file1, file2):
     """Compare structures and construct diff.
 
     Args:
@@ -70,20 +72,3 @@ def construct_diff(file1, file2):
                 'new_value': _process(value2),
             }
     return iterate(file1, file2)
-
-
-def generate_diff(file_path1, file_path2, style=STYLISH):
-    """Generate difference between two files.
-
-    Args:
-        file_path1: path to one of the files to compare
-        file_path2: path to the other of the files to compare
-        style: to be used for result output
-
-    Returns:
-        str
-    """
-    file1 = parse_file(file_path1)
-    file2 = parse_file(file_path2)
-    diff = construct_diff(file1, file2)
-    return format_diff(diff, style)

@@ -20,9 +20,16 @@ def format_diff(diff, style):
 
     Returns:
         str
+
+    Raises:
+        ValueError: unknown style
     """
     if style == JSON:
         return format_json(diff)
     if style == PLAIN:
         return format_plain(diff)
-    return format_stylish(diff)
+    if style == STYLISH:
+        return format_stylish(diff)
+    raise ValueError(
+        "Unknown style: '{style}'!".format(style=style),
+    )

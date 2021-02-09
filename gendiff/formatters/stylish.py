@@ -1,7 +1,7 @@
 """Stylish formatter."""
 
-from gendiff.constants import CHANGED, NEW, REMOVED, UNCHANGED
 from gendiff.formatters.common import stringify
+from gendiff.tree import CHANGED, NEW, REMOVED, UNCHANGED
 
 STYLISH_LINE = '{0}{1}: {2}'
 

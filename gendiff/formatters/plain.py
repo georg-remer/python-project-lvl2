@@ -1,7 +1,7 @@
 """Plain formatter."""
 
-from gendiff.constants import CHANGED, NEW, REMOVED
 from gendiff.formatters.common import stringify
+from gendiff.tree import CHANGED, NEW, REMOVED
 
 
 def _generate_line(key, state, old_value=None, new_value=None):

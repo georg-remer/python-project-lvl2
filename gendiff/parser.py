@@ -1,29 +1,27 @@
 """File parser."""
 
 import json
-import os
 
 import yaml
 
 
-def parse_file(file_path):
-    """Read file and parse its contents.
+def parse(data, format_name):
+    """Parse data based on file format.
 
     Args:
-        file_path: can be both relative and absolute
+        data: file contents
+        format_name: file format
 
     Returns:
         dict
 
     Raises:
-        RuntimeError: unknown file extension
+        RuntimeError: unknown file format
     """
-    _, extension = os.path.splitext(os.path.abspath(file_path))
-    with open(file_path, 'r') as file_contents:
-        if extension.lower() == '.json':
-            return json.load(file_contents)
-        if extension.lower() == '.yml':
-            return yaml.load(file_contents, Loader=yaml.FullLoader)
-        raise RuntimeError(
-            "Extension '{ext}' is not implemented".format(ext=extension),
-        )
+    if format_name == 'json':
+        return json.load(data)
+    if format_name in {'yml', 'yaml'}:
+        return yaml.load(data, Loader=yaml.FullLoader)
+    raise RuntimeError(
+        "Unknown file format: '{format}'!".format(format=format_name),
+    )
